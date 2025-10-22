@@ -73,6 +73,12 @@ const SidebarComponent: React.FC = () => {
   useEffect(() => {
     const _items = [
       {
+        title: "PharmaFlow",
+        mode: ["pharma"],
+        icon: <RiRobot2Line />,
+        onClick: () => changePage("pharma", {}, true, unsavedChanges),
+      },
+      {
         title: "Chat",
         mode: ["chat"],
         icon: <MdChatBubbleOutline />,

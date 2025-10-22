@@ -15,12 +15,12 @@ export const RouterContext = createContext<{
     guarded?: boolean
   ) => void;
 }>({
-  currentPage: "chat",
+  currentPage: "pharma",
   changePage: () => {},
 });
 
 export const RouterProvider = ({ children }: { children: React.ReactNode }) => {
-  const [currentPage, setCurrentPage] = useState<string>("chat");
+  const [currentPage, setCurrentPage] = useState<string>("pharma");
 
   const { showConfirmModal } = useContext(ToastContext);
 
@@ -75,7 +75,7 @@ export const RouterProvider = ({ children }: { children: React.ReactNode }) => {
     // Get page from URL parameter
     const pageParam = searchParams.get("page");
 
-    // If no page parameter exists, redirect to chat page
+    // If no page parameter exists, redirect to pharma page
     if (!pageParam) {
       // Preserve any existing query parameters (like conversation)
       const currentParams: Record<string, any> = {};
@@ -83,15 +83,16 @@ export const RouterProvider = ({ children }: { children: React.ReactNode }) => {
         currentParams[key] = value;
       });
 
-      // Add page=chat to the URL
-      const url = `/?${new URLSearchParams({ page: "chat", ...currentParams }).toString()}`;
+      // Add page=pharma to the URL
+      const url = `/?${new URLSearchParams({ page: "pharma", ...currentParams }).toString()}`;
       window.history.replaceState(null, "", url);
-      setCurrentPage("chat");
+      setCurrentPage("pharma");
       return;
     }
 
     // Validate page parameter against known pages
     const validPages = [
+      "pharma",
       "chat",
       "data",
       "collection",
@@ -101,9 +102,9 @@ export const RouterProvider = ({ children }: { children: React.ReactNode }) => {
       "elysia",
       "display",
     ];
-    const validatedPage = validPages.includes(pageParam) ? pageParam : "chat";
+    const validatedPage = validPages.includes(pageParam) ? pageParam : "pharma";
 
-    // If invalid page, redirect to chat
+    // If invalid page, redirect to pharma
     if (pageParam !== validatedPage) {
       const currentParams: Record<string, any> = {};
       searchParams.forEach((value, key) => {
@@ -112,7 +113,7 @@ export const RouterProvider = ({ children }: { children: React.ReactNode }) => {
         }
       });
 
-      const url = `/?${new URLSearchParams({ page: "chat", ...currentParams }).toString()}`;
+      const url = `/?${new URLSearchParams({ page: "pharma", ...currentParams }).toString()}`;
       window.history.replaceState(null, "", url);
     }
 

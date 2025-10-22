@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+pydantic-settings
+llama-index-core
+llama-index-vector-stores-weaviate
+llama-index-embeddings-huggingface
+weaviate-client==4.9.3
+pypdf==5.1.0
+python-dotenv==1.0.1
+aiofiles==24.1.0
+requests==2.32.3
+numpy
+sentence-transformers
+

@@ -42,6 +42,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
+    "d3": "^7.9.0",
     "dagre": "^0.8.5",
     "embla-carousel-react": "^8.5.2",
     "fingerprintjs": "^0.5.3",
@@ -73,6 +74,7 @@
   },
   "devDependencies": {
     "@types/animejs": "^3.1.13",
+    "@types/d3": "^7.4.3",
     "@types/dagre": "^0.7.52",
     "@types/node": "^20",
     "@types/react": "^18",
