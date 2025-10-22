@@ -1,3 +1,18 @@
+# Smart Data Package
+
+**1-line summary:**  
+AI-powered RAG assistant for pharma–CDMO data packages using **Weaviate**, **LlamaIndex**, and **FriendliAI**.
+
+**Initial focus:**  
+Upload a single PDF (e.g., a tech transfer report or analytical summary), automatically index it, and chat with it using retrieval-augmented generation (RAG).
+
+**Two ways to expand:**
+- **Vertically:** Scale across multiple projects to enable cross-project Q&A and insights (e.g., “Which processes used continuous flow?”).  
+- **Horizontally:** Within a single project, extend capabilities through three stages:
+  1. **Literature scrape** – find related chemistry and prior art.
+  2. **Multi-perspective extraction** – summarize key requirements from finance, FTE, and sustainability viewpoints.
+  3. **Agentized Q&A** – interactive assistant that reasons and cites context dynamically.
+  
 # Elysia Frontend
 
 ![Elysia](./public/logo.svg)
