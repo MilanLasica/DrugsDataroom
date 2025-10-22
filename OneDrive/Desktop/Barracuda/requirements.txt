@@ -1,0 +1,3 @@
+weaviate-client
+llama-index
+friendli-client
